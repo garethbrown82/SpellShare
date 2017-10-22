@@ -1,0 +1,39 @@
+﻿@model List<SpellShare.Models.Student>
+
+
+<div class="panel panel-default gb-panel-top-margin">
+    <div class="panel-heading">Student List</div>
+    <div class="panel-body">
+        <p>Here is your current list of students.</p>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.Username</td>
+                <td>@student.Password</td>
+                <td>
+                    <form method="get" asp-action="EditStudent" asp-route-id="@student.StudentId">
+                        <input type="submit" value="Edit" class="btn btn-default" />
+                    </form>
+                </td>
+                <td>
+                    <form method="post" asp-action="DeleteStudent" asp-route-id="@student.StudentId">
+                        <input type="submit" value="Delete" class="btn btn-danger"/>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

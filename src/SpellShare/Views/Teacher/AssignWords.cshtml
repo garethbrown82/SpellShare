@@ -1,0 +1,47 @@
+﻿@model SpellShare.ViewModels.AssignWordsViewModel
+@{ 
+    ViewData["Title"] = "Assign Words";
+}
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h2>Assign Words to List</h2>
+        <form>
+            <div class="form-group">
+                <label asp-for="SpellingListId">Select the Spelling List to assign words:</label>
+                <select asp-for="SpellingListId" asp-items="@(new SelectList(Model.SpellingLists, "SpellingListId", "Name"))" class="form-control" onchange="this.form.submit()"></select>
+            </div>
+        </form>
+        <form method="post" asp-action="AddWordToList">
+            <div class="form-group">
+                <input type="hidden" asp-for="SpellingListId" />
+                <label asp-for="SpellingWord">Add Word:</label>
+                <input asp-for="SpellingWord" class="form-control" />
+                <span asp-validation-for="SpellingWord"></span>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Add" />
+        </form>
+        <div class="panel panel-default gb-panel-top-margin">
+            <div class="panel-heading">Words in @Model.ActiveSpellingList.Name</div>
+            <table class="table">
+                <tr>
+                    <th>Word</th>
+                    <th>Delete</th>
+                </tr>
+                @foreach (var word in Model.WordAllocations)
+                {
+                    <tr>
+                        <td>@word.SpellingWord.Word</td>
+                        <td>
+                            <form method="post" asp-action="DeleteWordAllocation" asp-route-id="@word.WordListAllocationId">
+                                <input type="hidden" name="ActiveListId" value="@Model.ActiveSpellingList.SpellingListId" />
+                                <input type="submit" class="btn btn-link" value="Remove" />
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+                
+        </div>
+    </div>
+</div>

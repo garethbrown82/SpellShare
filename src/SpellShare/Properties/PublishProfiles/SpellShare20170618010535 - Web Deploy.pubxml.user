@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfKw2ort+xUiShVo4gS5nGAAAAAACAAAAAAAQZgAAAAEAACAAAABkwbvRSYwxW4uIJdHFlG2rs7BiRV23feguQblgBVanWgAAAAAOgAAAAAIAACAAAABFqTx13BexRibBG4N63lsTctBtI9MPM3dWRUc6UkmM3IAAAACJsJZ6PatIUtWTROQVTu2dhyarjLWZoUiLubPPp9u5O4xZ/WKFYyzDvo9CfsjO7Pby3f2xES5YKRvppVzloIuKVTCYR6cicwwvcMLt4Jh0dmaqYAsHpSu/upoPNr6ikAbmDoR5EVE0fBI9kH3ynAVZrZKie6hpXHqnV6ZGGQ7JD0AAAAA3cRR/BsiZICVNS6WmVbZbRUDqRg2ANK8l7fiznB3wzPeaeJ27N+DCL0jw9/sKcXRCRcI/lwK+17NnABkBcrgG</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="SpellShareConnection">
+      <Value>Server=(localdb)\MSSQLLocalDB;Database=SpellShare;Trusted_Connection=true;MultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

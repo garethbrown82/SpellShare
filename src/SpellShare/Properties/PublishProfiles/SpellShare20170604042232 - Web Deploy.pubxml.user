@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfKw2ort+xUiShVo4gS5nGAAAAAACAAAAAAAQZgAAAAEAACAAAACvRB+hwi49BrFCArxHTOuHV1vWQiTRkMnTsp10QLK2fAAAAAAOgAAAAAIAACAAAADwLeV/PP52NC/o299kwGvKenViClNnBJY3CvQ/D7ejNYAAAADUyeSFnijlGTTAmyRqrxqcKpsw2ZrErdEBsvjU0dY5FW7USNlOIH+uAOHfUreUx21z0NgLcrMT8NPrjTDPONKCurvd9LX+lP9JiTS1tCHtupVtm3MnxcYzM3wViqBADKHI77MX0a7c1OU8aacdfxySLShMdmwjssQ6nCx2ZPrx+EAAAACM//Lx+5Y+BT1tDFpGzFojwK1Ty378laOmy9plt4LUIEPtik0pYQYnv+PFEdRRIVRoUGn+z+6zKMf+Ik2x6G+8</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="SpellShareConnection">
+      <Value>Data Source=tcp:spellshare20170604042232dbserver.database.windows.net,1433;Initial Catalog=SpellShare20170604042232_db;User Id=garethbrown798!32@spellshare20170604042232dbserver;Password=5+R=Qs^x</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

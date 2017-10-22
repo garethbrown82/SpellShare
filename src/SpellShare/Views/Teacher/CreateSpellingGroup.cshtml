@@ -1,0 +1,29 @@
+﻿@model SpellShare.ViewModels.SpellingGroupViewModel
+@{ 
+    ViewData["Title"] = "Create Spelling Group";
+}
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h2>Create Spelling Group</h2>
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <textarea rows="5" asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+            <span>@ViewData["message"]</span>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        @await Component.InvokeAsync("SpellingGroup")
+    </div>   
+</div>

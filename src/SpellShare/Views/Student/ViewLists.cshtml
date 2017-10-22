@@ -1,0 +1,27 @@
+﻿@model SpellShare.ViewModels.ViewListsViewModel
+@{ 
+    ViewData["Title"] = "View Spelling Lists";
+}
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h2>Spelling Lists</h2>
+        <h3>Hi, @Model.Student.FirstName</h3>
+        <form>
+            <input type="hidden" name="StudentId" value="@Model.Student.StudentId" />
+            <div class="form-group">
+                <label asp-for="SpellingListId">Select the spelling list to view:</label>
+                <select asp-for="SpellingListId" asp-items="@(new SelectList(Model.SpellingLists, "SpellingListId", "Name"))" class="form-control" onchange="this.form.submit()"></select>
+           </div>
+        </form>
+        <h3>@Model.ActiveSpellingList.Name</h3>
+        <div>
+            <ul class="list-group">
+                @foreach (var word in Model.SpellingWords)
+                {
+                    <li class="list-group-item">@word.Word</li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

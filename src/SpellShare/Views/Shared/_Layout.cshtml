@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    
+    
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand">Spell Share</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".collapsableNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse collapsableNavBar">
+                <ul class="nav navbar-nav navbar-right">                                       
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.Name<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                @*<li><a asp-controller="SpellingList" asp-action="CreateSpellingWord">Create Spelling Word</a></li>*@
+                                <li><a asp-controller="Teacher" asp-action="AddStudent">Add Student</a></li>
+                                <li><a asp-controller="Teacher" asp-action="CreateSpellingGroup">Create Spelling Group</a></li>
+                                <li><a asp-controller="Teacher" asp-action="AssignStudents">Assign Students</a></li>
+                                <li><a asp-controller="Teacher" asp-action="CreateSpellingList">Create Spelling List</a></li>
+                                <li><a asp-controller="Teacher" asp-action="AssignWords">Assign Words</a></li>
+                                <li><a asp-controller="Teacher" asp-action="AssignLists">Assign Lists</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+                            </ul>
+                        </li>                       
+                    }
+                    else
+                    {
+                        <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                        <li><a asp-controller="Account" asp-action="Login">Teacher Login</a></li>
+                    }                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+    <div id="footer" class="container-fluid">
+        <div class="navbar navbar-bottom">
+            <h4 class="text-center">&copy Copyright SpellShare 2017</h4>
+        </div>
+    </div>
+   
+    
+
+</body>
+</html>

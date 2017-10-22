@@ -1,0 +1,35 @@
+﻿@model SpellShare.ViewModels.StudentLoginViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h2>Welcome to SpellShare</h2>
+
+        <form asp-controller="Student" asp-action="LoginStudent">
+            <div class="form-group">
+                <label asp-for="TeacherUserName">Your teacher's username:</label>
+                <input asp-for="TeacherUserName" class="form-control" />
+                <span asp-validation-for="TeacherUserName"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentUserName">Your username:</label>
+                <input asp-for="StudentUserName" class="form-control" />
+                <span asp-validation-for="StudentUserName"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentPassword">Your password:</label>
+                <input asp-for="StudentPassword" class="form-control" />
+                <span asp-validation-for="StudentPassword"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">View Lists</button>
+        </form>
+    </div>
+</div>
+
+
+
+

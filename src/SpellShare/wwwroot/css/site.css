@@ -1,0 +1,61 @@
+﻿.gb-panel-top-margin {
+    margin-top: 50px;
+}
+
+/*Bootstrap overwrites*/
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*.navbar-default {
+    background-color: #0072ff;
+    border-color: #000000;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #333;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #0072ff;
+    border-color: #000000;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: rgba(0, 114, 255, 0.84);
+    border-color: #000000;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #ff0700;
+    border-color: #000000;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: rgba(255, 7, 0, 0.72);
+    border-color: #000000;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #000;
+}*/
+
+

@@ -1,0 +1,77 @@
+﻿@model SpellShare.ViewModels.AssignListsViewModel
+@{ 
+    ViewData["Title"] = "Assign List to Group";
+}
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h2>Assign Lists to Groups</h2>
+        <form>
+            <div class="form-group">
+                <label asp-for="SpellingGroupId">Select the Spelling Group to assign Spelling Lists</label>
+                <select asp-for="SpellingGroupId" asp-items="@(new SelectList(Model.SpellingGroups, "SpellingGroupId", "Name"))" class="form-control" onchange="this.form.submit()"></select>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Unassigned Lists</div>
+                <div class="panel-body">
+                    <p>Spelling Lists not assigned to this group.</p>
+                </div>
+                <table class="table">
+                    <tr>
+                        <th>Spelling List</th>
+                        <th>Add List</th>
+                    </tr>
+                    
+                    @foreach (var list in Model.UnassignedSpellingLists)
+                    {
+                        <tr>
+                            <td>@list.Name</td>
+                            <td>
+                                <form method="post" asp-action="AddListToGroup" asp-route-id="@list.SpellingListId">
+                                    <input type="hidden" name="SpellingGroupId" value="@Model.ActiveSpellingGroup.SpellingGroupId" />
+                                    <button type="submit" class="btn btn-link">Add</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Assigned Lists</div>
+                <div class="panel-body">
+                    <p>Spelling Lists assigned to this group.</p>
+                </div>
+                <table class="table">
+                    <tr>
+                        <th>Spelling List</th>
+                        <th>Remove List</th>
+                    </tr>
+                    @foreach (var list in Model.AssignedSpellingLists)
+                    {
+                        <tr>
+                            <td>@list.Name</td>
+                            <td>
+                                <form method="post" asp-action="RemoveListFromGroup" asp-route-id="@list.SpellingListId">
+                                    <input type="hidden" name="SpellingGroupId" value="@Model.ActiveSpellingGroup.SpellingGroupId" />
+                                    <button type="submit" class="btn btn-link">Remove</button>
+                                </form>
+                            </td>
+                        </tr>
+
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

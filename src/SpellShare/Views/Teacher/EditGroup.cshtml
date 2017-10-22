@@ -1,0 +1,24 @@
+﻿@model SpellShare.ViewModels.SpellingGroupViewModel
+@{ 
+    ViewData["Title"] = "Edit Group";
+}
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h2>Edit Group</h2>
+        <form method="post" asp-antiforgery="true">
+            <input type="hidden" asp-for="SpellingGroupId" />
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <textarea rows="5" asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
