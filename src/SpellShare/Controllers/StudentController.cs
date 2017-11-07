@@ -25,11 +25,6 @@ namespace SpellShare.Controllers
         {
             Student student = await _context.Students.SingleOrDefaultAsync(s => s.TeacherUsername == studentLoginVM.TeacherUserName && s.Username == studentLoginVM.StudentUserName && s.Password == studentLoginVM.StudentPassword);
 
-            //ViewListsViewModel viewModel = new ViewListsViewModel()
-            //{
-            //    Student = student
-            //};
-
             return RedirectToAction("ViewLists", new { StudentId = student.StudentId });
         }
 
