@@ -1,0 +1,10 @@
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\bin\Debug\netcoreapp1.0\SpellShare.deps.json
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\bin\Debug\netcoreapp1.0\SpellShare.runtimeconfig.json
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\bin\Debug\netcoreapp1.0\SpellShare.runtimeconfig.dev.json
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\bin\Debug\netcoreapp1.0\SpellShare.dll
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\bin\Debug\netcoreapp1.0\SpellShare.pdb
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\obj\Debug\netcoreapp1.0\SpellShare.csproj.CoreCompileInputs.cache
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\obj\Debug\netcoreapp1.0\SpellShare.AssemblyInfoInputs.cache
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\obj\Debug\netcoreapp1.0\SpellShare.AssemblyInfo.cs
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\obj\Debug\netcoreapp1.0\SpellShare.dll
+C:\Users\garet\Source\repos\Projects\SpellShare\src\SpellShare\obj\Debug\netcoreapp1.0\SpellShare.pdb

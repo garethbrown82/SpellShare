@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2CD8452C-790E-4EF7-9085-647074B66203}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47859ABE-EED4-4DAF-9C65-879D695CCB01}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SpellShare", "src\SpellShare\SpellShare.xproj", "{1CD2D2B9-AC1C-4007-8991-7ABEDB0A9848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpellShare", "src\SpellShare\SpellShare.csproj", "{1CD2D2B9-AC1C-4007-8991-7ABEDB0A9848}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +26,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1CD2D2B9-AC1C-4007-8991-7ABEDB0A9848} = {2CD8452C-790E-4EF7-9085-647074B66203}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://garethbrown82.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = src\\SpellShare\\SpellShare.xproj
-		SccProjectTopLevelParentUniqueName1 = SpellShare.sln
-		SccProjectName1 = src/SpellShare
-		SccLocalPath1 = src\\SpellShare
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EC8E280-604E-4A59-9FB3-E038A39906E5}
 	EndGlobalSection
 EndGlobal
